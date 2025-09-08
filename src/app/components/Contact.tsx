@@ -37,7 +37,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div>
             <h3 className="text-2xl font-semibold text-white mb-6">Let's Connect</h3>
-            <p className="text-gray-300 mb-8">
+            <p className="text-gray-600 dark:text-gray-300 mb-8">
               I'm always open to discussing new opportunities, interesting projects, 
               or just having a chat about technology and development.
             </p>
@@ -107,7 +107,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                    className="w-full px-4 py-3 bg-card border border-gray-300 dark:border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                     placeholder="Your Name"
                   />
                 </div>
@@ -120,7 +120,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                    className="w-full px-4 py-3 bg-card border border-gray-300 dark:border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                  className="w-full px-4 py-3 bg-card border border-gray-300 dark:border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                   placeholder="What's this about?"
                 />
               </div>
@@ -149,7 +149,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 resize-none"
+                  className="w-full px-4 py-3 bg-card border border-gray-300 dark:border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 resize-none"
                   placeholder="Tell me about your project or opportunity..."
                 ></textarea>
               </div>

@@ -11,8 +11,8 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-1 rounded-lg">
-              <div className="bg-gray-800 p-8 rounded-lg">
-                <p className="text-lg text-gray-300 leading-relaxed">
+              <div className="bg-card p-8 rounded-lg">
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                   {portfolioData.personalInfo.about}
                 </p>
                 
@@ -34,7 +34,7 @@ export default function About() {
             <h3 className="text-2xl font-semibold text-white mb-6">Education</h3>
             
             {portfolioData.education.map((edu, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg border-l-4 border-blue-500">
+              <div key={index} className="bg-card p-6 rounded-lg border-l-4 border-blue-500">
                 <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
                 <p className="text-blue-400">{edu.institution}</p>
                 <p className="text-gray-400">{edu.period}</p>

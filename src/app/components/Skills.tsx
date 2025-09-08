@@ -4,7 +4,7 @@ export default function Skills() {
   const { skills } = portfolioData;
 
   const SkillCategory = ({ title, items }: { title: string; items: string[] }) => (
-    <div className="bg-gray-800 p-6 rounded-lg">
+    <div className="bg-card p-6 rounded-lg">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
         <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
         {title}
@@ -23,7 +23,7 @@ export default function Skills() {
   );
 
   return (
-    <section id="skills" className="py-20 px-4 bg-gray-800">
+    <section id="skills" className="py-20 px-4 bg-card">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
           Technical Skills
@@ -31,20 +31,20 @@ export default function Skills() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">7+</div>
-            <div className="text-gray-300">Years Experience</div>
+            <div className="text-4xl font-bold text-blue-400 mb-2">8+</div>
+            <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-blue-400 mb-2">20+</div>
-            <div className="text-gray-300">Technologies</div>
+            <div className="text-gray-600 dark:text-gray-300">Technologies</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-blue-400 mb-2">10+</div>
-            <div className="text-gray-300">Projects</div>
+            <div className="text-gray-600 dark:text-gray-300">Projects</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-blue-400 mb-2">12+</div>
-            <div className="text-gray-300">Team Members Led</div>
+            <div className="text-gray-600 dark:text-gray-300">Team Members Led</div>
           </div>
         </div>
 

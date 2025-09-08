@@ -1,14 +1,57 @@
 @import "tailwindcss";
 
+/* Define your theme variables */
 :root {
-  --foreground: #ffffff;
-  --background: #0a0a0a;
+  --color-light-primary: #3b82f6;
+  --color-light-background: #f8fafc;
+  --color-light-card: #ffffff;
+  --color-light-text: #1f2937;
+  --color-light-border: #e5e7eb;
+  
+  --color-dark-primary: #3b82f6;
+  --color-dark-background: #111827;
+  --color-dark-card: #1f2937;
+  --color-dark-text: #f9fafb;
+  --color-dark-border: #374151;
+
+  /* Default to light theme */
+  --color-primary: var(--color-light-primary);
+  --color-background: var(--color-light-background);
+  --color-card: var(--color-light-card);
+  --color-text: var(--color-light-text);
+  --color-border: var(--color-light-border);
 }
 
+[data-theme="dark"] {
+  --color-primary: var(--color-dark-primary);
+  --color-background: var(--color-dark-background);
+  --color-card: var(--color-dark-card);
+  --color-text: var(--color-dark-text);
+  --color-border: var(--color-dark-border);
+}
+
+/* Apply the variables */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom utility classes for theme-aware styling */
+.bg-theme {
+  background-color: var(--color-background);
+}
+
+.bg-card {
+  background-color: var(--color-card);
+}
+
+.text-theme {
+  color: var(--color-text);
+}
+
+.border-theme {
+  border-color: var(--color-border);
 }
 
 /* Custom scrollbar */
@@ -17,14 +60,30 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: var(--color-card);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: var(--color-primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: color-mix(in srgb, var(--color-primary) 80%, black);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animation for theme toggle */
+@keyframes themeSwitch {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
+
+.animate-theme-switch {
+  animation: themeSwitch 0.3s ease-in-out;
 }

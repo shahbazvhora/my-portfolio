@@ -2,7 +2,7 @@ import { portfolioData } from '@/app/lib/data'
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-4 bg-gray-800">
+    <section id="experience" className="py-20 px-4 bg-card">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
           Work Experience
@@ -33,7 +33,7 @@ export default function Experience() {
                   
                   <ul className="space-y-3">
                     {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="text-gray-300 flex items-start">
+                      <li key={achIndex} className="text-gray-600 dark:text-gray-300 flex items-start">
                         <span className="text-blue-400 mr-2">•</span>
                         {achievement}
                       </li>

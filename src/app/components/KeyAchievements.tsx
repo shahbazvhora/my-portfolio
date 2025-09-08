@@ -24,7 +24,7 @@ export default function KeyAchievements() {
               <div key={index} className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 
-                <div className="relative bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-blue-400/30 transition-all duration-300 h-full">
+                <div className="relative bg-gray-900/80 backdrop-blur-sm p-8 rounded-2xl border border-gray-300 dark:border-gray-700/50 hover:border-blue-400/30 transition-all duration-300 h-full">
                   <div className="flex justify-center mb-6">
                     <div className="p-3 bg-blue-600/20 rounded-full">
                       <IconComponent className="w-8 h-8 text-blue-400" />
@@ -35,7 +35,7 @@ export default function KeyAchievements() {
                     {achievement.title}
                   </h3>
                   
-                  <p className="text-gray-300 text-lg leading-relaxed text-center">
+                  <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed text-center">
                     {achievement.description}
                   </p>
                 </div>
